@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <!-- <p>Profile design</p> -->
+                <!-- <h2>Hi, I am <span>Chandana H R</span><br>from Davanagere</h2> -->
+            </div>
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="second.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>To secure the challenges position in reputed organization and give my level best in performance.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>SQL</span><br>Solving Queries</li>
+                            <li><span>Web development</span><br>Web app development</li>
+                            <li><span>App Development</span><br>Building Android</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Euphoric Thought Technologies</span><br>Deploy react website on ec2 nginx server</li>
+                            <li><span>Compsoft Technologies</span><br>Machine learning with Python</li>
+                            <li><span>TechnoHacks EduTech</span><br>Python Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>BE in CS at UBDT,Davanagere</li>
+                            <li><span>2020</span><br>SAI PU,Shimoga</li>
+                            <li><span>2018</span><br>Navachethana,Channagiri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">Home</a>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>It was an best experience to learn web development</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Udemy</h2>
+                    <p>The Complete Python Bootcamp from Zero to Hero in Python</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>App design is an ongoing process comprising user experience and user interface elements</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+            <a href="#" class="btn">Home</a>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects tou to the talented people around the world.Download it from play store</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects tou to the talented people around the world.Download it from play store</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects tou to the talented people around the world.Download it from play store</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">Home</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div clss="containter">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p>chandanaammu31350@gmail.com</p>
+                    <p>9663110541</p>
+                    
+                    <a href="RESUME.pdf" download class="btn btn2">Download CV</a>                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright Kevin made with by easy tutorials</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby0rP5uI0CDgleWmqS6Yfn1k9S0PsXOiaiKPFp25JmpxlUr0Xd5Z8MHA6k9wOSOritS6w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
